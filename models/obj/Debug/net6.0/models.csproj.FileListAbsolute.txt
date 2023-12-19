@@ -1,0 +1,12 @@
+/home/gfried-code/RiderProjects/projetsys/models/bin/Debug/net6.0/models.deps.json
+/home/gfried-code/RiderProjects/projetsys/models/bin/Debug/net6.0/models.dll
+/home/gfried-code/RiderProjects/projetsys/models/bin/Debug/net6.0/models.pdb
+/home/gfried-code/RiderProjects/projetsys/models/obj/Debug/net6.0/models.csproj.AssemblyReference.cache
+/home/gfried-code/RiderProjects/projetsys/models/obj/Debug/net6.0/models.GeneratedMSBuildEditorConfig.editorconfig
+/home/gfried-code/RiderProjects/projetsys/models/obj/Debug/net6.0/models.AssemblyInfoInputs.cache
+/home/gfried-code/RiderProjects/projetsys/models/obj/Debug/net6.0/models.AssemblyInfo.cs
+/home/gfried-code/RiderProjects/projetsys/models/obj/Debug/net6.0/models.csproj.CoreCompileInputs.cache
+/home/gfried-code/RiderProjects/projetsys/models/obj/Debug/net6.0/models.dll
+/home/gfried-code/RiderProjects/projetsys/models/obj/Debug/net6.0/refint/models.dll
+/home/gfried-code/RiderProjects/projetsys/models/obj/Debug/net6.0/models.pdb
+/home/gfried-code/RiderProjects/projetsys/models/obj/Debug/net6.0/ref/models.dll

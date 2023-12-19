@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "aSckpE5hoN/Kq4RCOPP5JhzX/30fgXWMy01I34hsJMUCoL3C5GXedtt9c5rDHrWlJCbcYybvoGUNmXW5Xdd24g==",
+  "success": true,
+  "projectFilePath": "/home/gfried-code/RiderProjects/projetsys/models/models.csproj",
+  "expectedPackageFiles": [
+    "/home/gfried-code/.nuget/packages/microsoft.netcore.app.ref/6.0.25/microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "/home/gfried-code/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.25/microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

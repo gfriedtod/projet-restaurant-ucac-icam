@@ -1,0 +1,4 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"/home/gfried-code/RiderProjects/projetsys/view/Content/tile015.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/tile.xnb","TextureProcessor","Texture2DContent",409,1109,0.1364375
+"/home/gfried-code/RiderProjects/projetsys/view/Content/tile056.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/table.xnb","TextureProcessor","Texture2DContent",325,1109,0.0024058
+"/home/gfried-code/RiderProjects/projetsys/view/Content/tile058.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/mh.xnb","TextureProcessor","Texture2DContent",332,1109,0.0006744

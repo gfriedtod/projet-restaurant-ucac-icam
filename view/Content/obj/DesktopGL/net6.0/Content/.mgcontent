@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>/home/gfried-code/RiderProjects/projetsys/view/Content/tile015.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/view/Content/tile056.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/view/Content/tile058.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File>tile.png</File>
+    <File>table.png</File>
+    <File>mh.png</File>
+  </DestFiles>
+</SourceFileCollection>

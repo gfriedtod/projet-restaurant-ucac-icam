@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "view", "view\view.csproj", "{153B3022-214A-42C7-97ED-D40060907920}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "models", "models\models.csproj", "{0C0B7336-7F20-4B6C-BDF4-0B657D875968}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "controller", "controller\controller.csproj", "{266F6603-0E72-48A8-B74C-D3265C68573D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{153B3022-214A-42C7-97ED-D40060907920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153B3022-214A-42C7-97ED-D40060907920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153B3022-214A-42C7-97ED-D40060907920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153B3022-214A-42C7-97ED-D40060907920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C0B7336-7F20-4B6C-BDF4-0B657D875968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C0B7336-7F20-4B6C-BDF4-0B657D875968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C0B7336-7F20-4B6C-BDF4-0B657D875968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C0B7336-7F20-4B6C-BDF4-0B657D875968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{266F6603-0E72-48A8-B74C-D3265C68573D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{266F6603-0E72-48A8-B74C-D3265C68573D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{266F6603-0E72-48A8-B74C-D3265C68573D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{266F6603-0E72-48A8-B74C-D3265C68573D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
