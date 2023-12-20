@@ -33,3 +33,11 @@
 /home/gfried-code/RiderProjects/projetsys/controller/obj/Debug/net6.0/controller.pdb
 /home/gfried-code/RiderProjects/projetsys/controller/obj/Debug/net6.0/controller.genruntimeconfig.cache
 /home/gfried-code/RiderProjects/projetsys/controller/obj/Debug/net6.0/ref/controller.dll
+/home/gfried-code/RiderProjects/projetsys/controller/bin/Debug/net6.0/Content/client.xnb
+/home/gfried-code/RiderProjects/projetsys/controller/bin/Debug/net6.0/Content/cuisto.xnb
+/home/gfried-code/RiderProjects/projetsys/controller/bin/Debug/net6.0/Content/serveur.xnb
+/home/gfried-code/RiderProjects/projetsys/controller/bin/Debug/net6.0/Content/tile020.xnb
+/home/gfried-code/RiderProjects/projetsys/controller/bin/Debug/net6.0/Content/tile019.xnb
+/home/gfried-code/RiderProjects/projetsys/controller/bin/Debug/net6.0/Content/tile104.xnb
+/home/gfried-code/RiderProjects/projetsys/controller/bin/Debug/net6.0/Content/client3.xnb
+/home/gfried-code/RiderProjects/projetsys/controller/bin/Debug/net6.0/Content/client2.xnb

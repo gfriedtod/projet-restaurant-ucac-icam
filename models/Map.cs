@@ -61,41 +61,51 @@ public class Map
 
                   switch (item) 
                   {
-                                      case '0':
-                                          
-                                          sprite =new TIles(new Size(50,50), new Point(i,j));
-                                          map[i, j] = sprite;
-                                         ; 
-                                         // sprites.Add(sprite);
-                                          break;
-                                      case'1':
-                                          sprite = new Table(new Size(50,50), new Point(i,j),5,false, j);
+                                      // case '0':
+                                      //     
+                                      //     sprite =new TIles(new Size(40,40), new Point(i,j));
+                                      //     map[i, j] = sprite;
+                                      //    ; 
+                                      //    // sprites.Add(sprite);
+                                      //     break;
+                                      case '9':
+                                          sprite = new Table(new Size(40,40), new Point(i,j),5,false, j);
                                           map[i, j] = sprite;
                                           sprites.Add(sprite);
-                                          Console.Write(map[i,j].Sprite1); 
+                                          //Console.Write(map[i,j].Sprite1); 
                                           break;
-                                      case '2':
-                                          sprite = new Table(new Size(50,50), new Point(i,j),5,false, j);
+                                      case  '8':
+                                          sprite = new Table(new Size(40,40), new Point(i,j),5,false, j);
                                           map[i, j] = sprite;
                                           sprites.Add(sprite);
                                         
                                           break;
                                       case '3':
-                                          sprite = new MHotel(new Size(50,50), new Point(i,j), this);
+                                          sprite = new MHotel(new Size(40,40), new Point(i,j), this);
                                           map[i, j] = sprite;
                                           sprites.Add(sprite);
                                         //  Console.Write(map[i,j].Sprite1); 
                                           break;
                                       
-                                                                         
-                                      
-                                      default :
-                                          Console.Write(item);
-                                          sprite = new TIles(new Size(10,10), new Point(i,j));
-                                          map[i, j] = sprite;
-                                          Console.Write(map[i,j].Sprite1); 
-                                         // sprites.Add(sprite);
+                                      case '-':
+                                          sprite = new Client(new Size(40, 40), new Point(i, j), this,(int)new Random().NextInt64(5),true);
+                                          map[i,j]=sprite;
+                                          sprites.Add(sprite);
                                           break;
+                                      
+                                      case 'r':
+                                          sprite = new RangeLead(new Size(40,40), new Point(i,j), this);
+                                          map[i, j] = sprite;
+                                          sprites.Add(sprite);
+                                          break;
+                                      
+                                      // default :
+                                      //     Console.Write(item);
+                                      //     sprite = new TIles(new Size(10,10), new Point(i,j));
+                                      //     map[i, j] = sprite;
+                                      //     Console.Write(map[i,j].Sprite1); 
+                                      //    // sprites.Add(sprite);
+                                      //     break;
                                       
                                   }
                                   

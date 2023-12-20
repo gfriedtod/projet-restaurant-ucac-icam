@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/home/gfried-code/RiderProjects/projetsys/view/Content/tile056.png</SourceFile>
-  <SourceTime>2023-12-19T08:53:26.1475525+01:00</SourceTime>
+  <SourceFile>/home/gfried-code/RiderProjects/projetsys/view/Content/Screenshot from 2023-12-20 01-24-48.png</SourceFile>
+  <SourceTime>2023-12-20T01:25:21.6909965+01:00</SourceTime>
   <DestFile>/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/table.xnb</DestFile>
-  <DestTime>2023-12-19T09:11:18.3388147+01:00</DestTime>
+  <DestTime>2023-12-20T01:26:10.6123004+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T12:44:56+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

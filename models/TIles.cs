@@ -7,6 +7,6 @@ public class TIles  : Sprite
 
     public TIles(Size size, Point position) : base(size, position)
     {
-        this.Sprite1 = "tile";
+        this.Sprite1 = "tile104";
     }
 }

@@ -6,7 +6,7 @@ using System;
 
 namespace view;
 
-public class Game1 : Game
+public class Game1 : Game ,IObserver<Models>
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
@@ -32,9 +32,9 @@ public class Game1 : Game
     {
         
         //set width of the screen
-        _graphics.PreferredBackBufferWidth = 1920;
+        _graphics.PreferredBackBufferWidth = 800;
         //set height of the screen
-        _graphics.PreferredBackBufferHeight = 1080;
+        _graphics.PreferredBackBufferHeight = 600;
         _graphics.ApplyChanges();
       
         
@@ -75,7 +75,7 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        GraphicsDevice.Clear(Color.Brown);
 
         if (Models.Map.Map1 != null)
             for (int i = 0; i < Models.Map.MaxY; i++)
@@ -90,7 +90,7 @@ public class Game1 : Game
                 
                      // Console.Write(models.Map.Map1[j,i].Position.X+" "+models.Map.Map1[j,i].Position.Y+"    ");
                      // Console.Write(j+" "+i);
-                     Console.WriteLine("");
+                    
                     _spriteBatch.Draw(
                         Content.Load<Texture2D>(models.Map.Map1[j,i].Sprite1), 
                         new Rectangle(new Point(models.Map.Map1[j,i].Position.X * models.Map.Map1[j,i].Size.Width, models.Map.Map1[j,i].Position.Y*models.Map.Map1[j,i].Size.Width), new Point(models.Map.Map1[j,i].Size.Width, models.Map.Map1[j,i].Size.Height)), 
@@ -109,5 +109,22 @@ public class Game1 : Game
         // TODO: Add your drawing code here
 
         base.Draw(gameTime);
+    }
+
+    public void OnCompleted()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnError(Exception error)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnNext(Models value)
+    {
+        this.models = value;
+        this.Update(new GameTime());
+        Console.WriteLine("modify");
     }
 }

@@ -1,4 +1,12 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"/home/gfried-code/RiderProjects/projetsys/view/Content/client1.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/client.xnb","TextureProcessor","Texture2DContent",999,4181,0.1582217
+"/home/gfried-code/RiderProjects/projetsys/view/Content/client2.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/client2.xnb","TextureProcessor","Texture2DContent",1126,4181,0.1402452
+"/home/gfried-code/RiderProjects/projetsys/view/Content/client3.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/client3.xnb","TextureProcessor","Texture2DContent",1053,4181,0.1424976
+"/home/gfried-code/RiderProjects/projetsys/view/Content/cuisto.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/cuisto.xnb","TextureProcessor","Texture2DContent",974,4181,0.0023837
+"/home/gfried-code/RiderProjects/projetsys/view/Content/Screenshot from 2023-12-20 01-24-48.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/table.xnb","TextureProcessor","Texture2DContent",19014,100885,0.2976968
+"/home/gfried-code/RiderProjects/projetsys/view/Content/serveur.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/serveur.xnb","TextureProcessor","Texture2DContent",1363,4181,0.001008
 "/home/gfried-code/RiderProjects/projetsys/view/Content/tile015.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/tile.xnb","TextureProcessor","Texture2DContent",409,1109,0.1364375
-"/home/gfried-code/RiderProjects/projetsys/view/Content/tile056.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/table.xnb","TextureProcessor","Texture2DContent",325,1109,0.0024058
+"/home/gfried-code/RiderProjects/projetsys/view/Content/tile019.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/tile019.xnb","TextureProcessor","Texture2DContent",466,18845,0.1395579
+"/home/gfried-code/RiderProjects/projetsys/view/Content/tile020.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/tile020.xnb","TextureProcessor","Texture2DContent",421,18041,0.1364096
 "/home/gfried-code/RiderProjects/projetsys/view/Content/tile058.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/mh.xnb","TextureProcessor","Texture2DContent",332,1109,0.0006744
+"/home/gfried-code/RiderProjects/projetsys/view/Content/tile104.png","/home/gfried-code/RiderProjects/projetsys/view/Content/bin/DesktopGL/Content/tile104.xnb","TextureProcessor","Texture2DContent",419,1109,0.1628463
