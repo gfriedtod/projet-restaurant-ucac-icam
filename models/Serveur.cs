@@ -7,59 +7,85 @@ public class Serveur  : Persone ,Move,IObservable<Serveur>
 {
     private List<Sprite> square;
     private List<IObserver<Serveur>> observers = new List<IObserver<Serveur>>();
+    private Point origin;
+    public Point Origin
+    {
+        get { return origin; }
+        set { origin = value; }
+    }
     public Serveur(Size size, Point position, Map map) : base(size, position, map)
     {
         this.Sprite1 = "serveur";
+        origin = position;
     }
    
 
 
     public void move(Point target)
     {
-        if (target.Y != this.Position.Y)
+        Console.WriteLine("we movit");
+        if(this.Position.X > target.X && this.Position. Y > target. Y)
         {
-            if (this.Position.Y -target.Y > 0)
+            while (this.Position. X > target. X)
             {
+                this.Position = new Point(this.Position.X-1 , this.Position.Y);
+                Thread.Sleep(50);
+            }
 
-                for (int i = 0; i <=target.Y ;i++)
-                {
-                    this.Position = new Point(this.Position.X, this.Position.Y -Size.Width);
-                    this.Notify(this);
-                    Thread.Sleep(100);
-                }
-                
-            }
-            else
+            while (this.Position. Y > target. Y)
             {
-                for (int i = 0; i <=target.Y ;i++)
-                {
-                    this.Position = new Point(this.Position.X, this.Position.Y + Size.Width);
-                    this.Notify(this);
-                    Thread.Sleep(100);
-                }  
+                this.Position = new Point(this.Position.X , this.Position.Y-1);
+                Thread.Sleep(50);
             }
         }
-        else  if(target.X != this.Position.X)
+
+        if (this.Position. X < target. X && this.Position. Y > target. Y)
         {
-            if (target.X - Position.X>0)
+            while (this.Position. X < target. X)
             {
-                for (int i = 0; i < target.X; i++)
-                {
-                    this.Position = new Point(this.Position.X + Size.Width, this.Position.Y);
-                    this.Notify(this);
-                    Thread.Sleep(100);
-                }
+                this.Position = new Point(this.Position.X+1 , this.Position.Y);
+                Thread.Sleep(50);
             }
-            else
+
+            while (this.Position. Y > target. Y)
             {
-                for (int i = 0; i < target.X; i++)
-                {
-                    this.Position = new Point(this.Position.X - Size.Width, this.Position.Y);
-                    this.Notify(this);
-                    Thread.Sleep(100);
-                } 
+                this.Position = new Point(this.Position.X , this.Position.Y-1);
+                Thread.Sleep(50);
             }
         }
+
+        if (this.Position. X > target. X && this.Position. Y < target. Y)
+        {
+            while (this.Position. X > target. X)
+            {
+                this.Position = new Point(this.Position.X-1 , this.Position.Y);
+                Thread.Sleep(50);
+            }
+
+            while (this.Position. Y < target. Y)
+            {
+                this.Position = new Point(this.Position.X , this.Position.Y-1);
+                Thread.Sleep(50);
+            }
+        }
+
+        if (this.Position. X < target. X && this.Position. Y < target. Y)
+        {
+            while (this.Position. X <target. X)
+            {
+                this.Position = new Point(this.Position.X+1 , this.Position.Y);
+                Thread.Sleep(50);
+            }
+
+            while (this.Position. Y < target. Y)
+            {
+                this.Position = new Point(this.Position.X , this.Position.Y+1);
+                Thread.Sleep(50);
+            }
+        }
+        
+        this.Notify(this);
+      
     }
 
     public IDisposable Subscribe(IObserver<Serveur> observer)

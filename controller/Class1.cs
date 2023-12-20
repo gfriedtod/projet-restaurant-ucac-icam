@@ -22,12 +22,13 @@ public class Controller
     }
 
     public void run() {
-      this.models.DrawingMap();
+      models.DrawingMap();
       
       new Thread((() =>
       {
           try
           {
+               // this.models.AssignedTableFOrServeur();
 
               for (int i = 0; i < models.Clients.Count; i++)
               {

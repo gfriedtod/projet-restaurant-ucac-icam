@@ -88,13 +88,19 @@ public class Map
                                           break;
                                       
                                       case '-':
-                                          sprite = new Client(new Size(40, 40), new Point(i, j), this,(int)new Random().NextInt64(5),true);
+                                          sprite = new Client(new Size(40, 40), new Point(i, j), this,3,true);
                                           map[i,j]=sprite;
                                           sprites.Add(sprite);
                                           break;
                                       
                                       case 'r':
                                           sprite = new RangeLead(new Size(40,40), new Point(i,j), this);
+                                          map[i, j] = sprite;
+                                          sprites.Add(sprite);
+                                          break;
+                                      
+                                      case 's':
+                                          sprite = new Serveur(new Size(40,40), new Point(i,j), this);
                                           map[i, j] = sprite;
                                           sprites.Add(sprite);
                                           break;

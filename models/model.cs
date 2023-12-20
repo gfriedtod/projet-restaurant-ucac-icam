@@ -43,17 +43,20 @@ public class Models : IObserver<MHotel> ,IObserver<Client>, IObserver<RangeLead>
     }
 
 
-    public void DrawingMap()
+    public async Task DrawingMap()
     {
         
         
         _tables = _map.drawMap("assets/map.txt");
-        getSprite();
+        getSprite(); 
+        AssignedTableFOrServeur();
+         
+          
         
                             
     }
 
-    public void getSprite()
+    public async Task getSprite()
     {
         foreach (Sprite sprite in _tables)
         {
@@ -86,19 +89,32 @@ public class Models : IObserver<MHotel> ,IObserver<Client>, IObserver<RangeLead>
         }
         mHotel.Tables = _table;
         mHotel.RangeLeads = _rangeLeads;
-        for (int i = 0; i < _table.Count; i++)
-        {
-            for (int j = 0; j < _serveurs.Count; j++)
-            {
-                if (j%2==0)
-                {
-                    
-                }
-            }
-        }
+
+      
+        
+        
+         
         mHotel.Subscribe(this);
 
 
+
+
+
+    }
+
+    public  void  AssignedTableFOrServeur()
+    {
+       
+        
+                    _table[0].serveur = _serveurs[0];
+                    _table[1].serveur = _serveurs[0];
+                     _table[2].serveur = _serveurs[0];
+                     _table[3].serveur = _serveurs[0];
+                     _table[4].serveur = _serveurs[1];
+                     _table[5].serveur = _serveurs[1];
+                     _table[6].serveur = _serveurs[1];
+                     _table[7].serveur = _serveurs[1];
+                     
 
 
 
@@ -161,6 +177,7 @@ public class Models : IObserver<MHotel> ,IObserver<Client>, IObserver<RangeLead>
 
     public void OnNext(Serveur value)
     {
+        
         this.Notify(this);
     }
 
@@ -191,27 +208,73 @@ public class Models : IObserver<MHotel> ,IObserver<Client>, IObserver<RangeLead>
 
     public void OnNext(Client value)
     {
-
+        if (value.TableNumber != null)
+        {
         if (value.ClientMove == ClientMove.Waiting)
         {
            // _clients.Remove(value);
            // _clients.Add(GeneratedClient.GetClient());
-            ThreadPool.QueueUserWorkItem( (state => value.move(new Point(value.TableNumber.Position.X, value.TableNumber.Position.Y-5))) );
-            value.ClientMove = ClientMove.TableAssigned;
-           // this.Map.Map1[value.Position.X, value.Position.Y] = value;
-            this.Notify(this);
-            // new Thread(o =>
-            // {
-            //     this.run();
-            // } ).Start();
+          
+               if (value.TableNumber.serveur != null)
+               {
+                   ThreadPool.QueueUserWorkItem( (state =>
+                   {
+                       value.move(new Point(value.TableNumber.Position.X, value.TableNumber.Position.Y - 10));
+                   
+                   }) );
+                   value.ClientMove = ClientMove.TableAssigned;
+                   // this.Map.Map1[value.Position.X, value.Position.Y] = value;
+                   this.Notify(this); 
+               }
+           
+           
+               // new Thread(o =>
+               // {
+               //     this.run();
+               // } ).Start();
 
-        }
-        else if (value.ClientMove == ClientMove.TableAssigned)
-        {
-            value.ClientMove = ClientMove.CommandePass;
-            this.Notify(this);
+           }
+           else if (value.ClientMove == ClientMove.TableAssigned)
+           {
             
-        }
+               ThreadPool.QueueUserWorkItem((state =>
+               {
+
+              
+                   value.TableNumber.serveur.move(value.Position);
+                   value.TableNumber.serveur.move(value.TableNumber.
+                       serveur.Origin);
+                   value.TableNumber.serveur.move(value.Position);
+                   value.TableNumber.serveur.move(value.TableNumber.serveur.Origin);
+                   value.TableNumber.serveur.move(value.TableNumber.serveur.Origin);
+                   value.Notify(value);
+                    
+                
+                
+               }));
+               value.ClientMove = ClientMove.Finish;
+            
+                
+            
+           
+            
+            
+               this.Notify(this);
+            
+           }
+
+           else  if(value.ClientMove == ClientMove.Finish)
+           {
+            
+               Console.WriteLine("go to origin");
+               ThreadPool.QueueUserWorkItem((state =>
+               {
+                   value.move(value.origin);
+                   //value.init();
+               }));  
+           } 
+           }
+         
         
         
         Console.WriteLine("modify");

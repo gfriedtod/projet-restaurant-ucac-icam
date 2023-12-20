@@ -46,12 +46,14 @@ public class Client : Persone ,Move,IObservable<Client>
     private List<Food> commande;
 
     private Table  tableNumber ;
+    public Point origin { get; set; }
 
     public Client(Size size, Point position, Map map, int numberClient, bool type) : base( size, position, map)
     {
         number_client = numberClient;
         this.type = type;
         this.Sprite1 = "client3";
+        origin = Position;
         
         new Thread((o =>
         {
@@ -160,5 +162,15 @@ public class Client : Persone ,Move,IObservable<Client>
             if (observer.GetType().GetProperty("IsStopped") == null || !(bool)observer.GetType().GetProperty("IsStopped").GetValue(observer, null))
                 observer.OnNext(value);
         }
+    }
+
+    public void init()
+    {
+        this.Position = origin;
+        this.commande = new List<Food>();
+        this.tableNumber = null;
+        ClientMove =ClientMove.Waiting;
+        Notify(this);
+        throw new NotImplementedException();
     }
 }

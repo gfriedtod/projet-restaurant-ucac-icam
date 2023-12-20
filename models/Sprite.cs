@@ -22,6 +22,12 @@ public class Sprite
         set { position = value; }
     }
     private Point position;
+    public Serveur serveur;
+    public Serveur Serveur
+    {
+        get { return serveur; }
+        set { serveur = value ?? throw new ArgumentNullException(nameof(value)); }
+    }
 
     public Sprite( Size size, Point position)
     {
