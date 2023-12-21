@@ -1,0 +1,55 @@
+
+-- Table "Materiels"
+CREATE TABLE Materiel (
+    id_materiel INT NOT NULL PRIMARY KEY,
+    type_materiel VARCHAR(255) NOT NULL,
+    nom_materiel VARCHAR(255) NOT NULL,
+    qte_materiel VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE Recettes (
+    id_recette INT NOT NULL PRIMARY KEY,
+    nom_recette VARCHAR(255) NOT NULL,
+    temps_Preparation TIME(2) NOT NULL,
+    temps_Cuisson TIME(2) NOT NULL,
+    temps_Repos TIME(2) NOT NULL,
+    accompagnement VARCHAR(255)
+);
+
+-- Table "Ingredients"
+CREATE TABLE Ingredient (
+    Id_Ingredient INT NOT NULL PRIMARY KEY,
+    Nom_Ingredient VARCHAR(255) NOT NULL,
+    Qte_Ingredient VARCHAR(255) NOT NULL,
+    Date_livraison DATETIME NOT NULL
+);
+
+CREATE TABLE Table_salle (
+    Id_Table INT NOT NULL PRIMARY KEY,
+    Nombres_personnes VARCHAR(255) NOT NULL,
+    Nom_client VARCHAR(255) NOT NULL
+);
+
+
+
+
+CREATE TABLE Commande (
+    Id_commande INT NOT NULL PRIMARY KEY,
+    Client VARCHAR(255) NOT NULL,
+    Date_commande DATETIME NOT NULL,
+    Plat_commande VARCHAR(255) NOT NULL,
+    Id_Table INT NOT NULL,
+    FOREIGN KEY (Id_Table) REFERENCES Table_salle(Id_Table)
+);
+
+-- Table "stock"
+CREATE TABLE stock (
+    id_stock INT NOT NULL PRIMARY KEY,
+    zone_stockage VARCHAR(255) NOT NULL,
+    date_mise_en_stock DATETIME NOT NULL,
+    id_Ingredient INT NOT NULL,
+    id_materiel INT NOT NULL,
+    FOREIGN KEY (id_Ingredient) REFERENCES Ingredient(Id_Ingredient),
+    FOREIGN KEY (id_materiel) REFERENCES Materiel(id_materiel)
+);
