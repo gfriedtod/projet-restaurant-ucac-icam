@@ -1,3 +1,9 @@
 ﻿
-using var game = new view.Game1();
+
+
+
+
+using view;
+
+using var game = new Game1();
 game.Run();

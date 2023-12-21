@@ -1,3 +1,5 @@
+using model_cuisine;
+using models;
 using System.Drawing;
 
 namespace mvc;
@@ -67,7 +69,7 @@ public class Map
                                       //     map[i, j] = sprite;
                                       //    ; 
                                       //    // sprites.Add(sprite);
-                                      //     break;
+                                      //     break
                                       case '9':
                                           sprite = new Table(new Size(40,40), new Point(i,j),5,false, j);
                                           map[i, j] = sprite;
@@ -101,6 +103,28 @@ public class Map
                                       
                                       case 's':
                                           sprite = new Serveur(new Size(40,40), new Point(i,j), this);
+                                          map[i, j] = sprite;
+                                          sprites.Add(sprite);
+                                          break;
+                                      
+                                      case 'c':
+                                          sprite = new Cheaf(new Size(40,40), new Point(i,j), this);
+                                          map[i, j] = sprite;
+                                          sprites.Add(sprite);
+                                          break;
+                                      
+                                      case 'l':
+                                          sprite = new LeadCheaf(new Size(40,40), new Point(i,j), this);
+                                          map[i, j] = sprite;
+                                          sprites.Add(sprite);
+                                          break;
+                                      case 'f' :
+                                          sprite = new Instru(new Size(40, 40), new Point(i, j));
+                                          map[i, j] = sprite;
+                                          sprites.Add(sprite);
+                                          break;
+                                      case 'd':
+                                          sprite = new  Door(new Size(40, 40), new Point(i, j));
                                           map[i, j] = sprite;
                                           sprites.Add(sprite);
                                           break;

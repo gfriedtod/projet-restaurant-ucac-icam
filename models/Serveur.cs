@@ -29,13 +29,13 @@ public class Serveur  : Persone ,Move,IObservable<Serveur>
             while (this.Position. X > target. X)
             {
                 this.Position = new Point(this.Position.X-1 , this.Position.Y);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
 
             while (this.Position. Y > target. Y)
             {
                 this.Position = new Point(this.Position.X , this.Position.Y-1);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
         }
 
@@ -44,13 +44,13 @@ public class Serveur  : Persone ,Move,IObservable<Serveur>
             while (this.Position. X < target. X)
             {
                 this.Position = new Point(this.Position.X+1 , this.Position.Y);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
 
             while (this.Position. Y > target. Y)
             {
                 this.Position = new Point(this.Position.X , this.Position.Y-1);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
         }
 
@@ -59,13 +59,13 @@ public class Serveur  : Persone ,Move,IObservable<Serveur>
             while (this.Position. X > target. X)
             {
                 this.Position = new Point(this.Position.X-1 , this.Position.Y);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
 
             while (this.Position. Y < target. Y)
             {
                 this.Position = new Point(this.Position.X , this.Position.Y-1);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
         }
 
@@ -74,17 +74,17 @@ public class Serveur  : Persone ,Move,IObservable<Serveur>
             while (this.Position. X <target. X)
             {
                 this.Position = new Point(this.Position.X+1 , this.Position.Y);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
 
             while (this.Position. Y < target. Y)
             {
                 this.Position = new Point(this.Position.X , this.Position.Y+1);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
         }
         
-        this.Notify(this);
+        //this.Notify(this);
       
     }
 

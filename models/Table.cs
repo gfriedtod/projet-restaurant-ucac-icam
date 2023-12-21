@@ -25,7 +25,7 @@ public class Table :Sprite,IObservable<Table>
     {
         number_clinet = numberClinet;
         table_number = table_number;
-        this.Sprite1="table";
+        this.Sprite1="table2";
         this.state = state;
     }
     public int Number_clinet

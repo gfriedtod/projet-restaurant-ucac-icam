@@ -1,3 +1,4 @@
+using models;
 using System.Drawing;
 
 namespace mvc;
@@ -5,12 +6,14 @@ namespace mvc;
 public class Models : IObserver<MHotel> ,IObserver<Client>, IObserver<RangeLead>, IObserver<Serveur>,IObserver<Table>,IObservable<Models>
 {
 
+    private LogWriter _logWriter = new LogWriter(new StreamWriter("assets/salleLog.txt"));
     private List<Sprite> _tables=new List<Sprite>();
     private List<Serveur>_serveurs=new List<Serveur>();
     private List<RangeLead>_rangeLeads=new List<RangeLead>();
     private List<Client> _clients = new List<Client>(); 
     private List<Table> _table=new List<Table>();
     private GeneratedClient GeneratedClient;
+    private Semaphore _semaphore = new Semaphore(2, 300);
 
  
     
@@ -208,23 +211,29 @@ public class Models : IObserver<MHotel> ,IObserver<Client>, IObserver<RangeLead>
 
     public void OnNext(Client value)
     {
-        if (value.TableNumber != null)
-        {
+        
+        
         if (value.ClientMove == ClientMove.Waiting)
         {
            // _clients.Remove(value);
            // _clients.Add(GeneratedClient.GetClient());
+         //  _semaphore.WaitOne();
           
                if (value.TableNumber.serveur != null)
                {
+                   
                    ThreadPool.QueueUserWorkItem( (state =>
                    {
-                       value.move(new Point(value.TableNumber.Position.X, value.TableNumber.Position.Y - 10));
+                       _logWriter.write("le client va s'assoir");
+                       value.ClientMove = ClientMove.TableAssigned;
+                       value.move(new Point(value.TableNumber.Position.X, value.TableNumber.Position.Y));
+                       Thread.Sleep(2000);
+                       _logWriter.write("passer une commande");
                    
                    }) );
-                   value.ClientMove = ClientMove.TableAssigned;
+                   
                    // this.Map.Map1[value.Position.X, value.Position.Y] = value;
-                   this.Notify(this); 
+                   //this.Notify(this); 
                }
            
            
@@ -241,12 +250,15 @@ public class Models : IObserver<MHotel> ,IObserver<Client>, IObserver<RangeLead>
                {
 
               
-                   value.TableNumber.serveur.move(value.Position);
-                   value.TableNumber.serveur.move(value.TableNumber.
-                       serveur.Origin);
-                   value.TableNumber.serveur.move(value.Position);
+                   value.TableNumber.serveur.move(value.TableNumber.Position);
+                   _logWriter.write("servir le client");
                    value.TableNumber.serveur.move(value.TableNumber.serveur.Origin);
-                   value.TableNumber.serveur.move(value.TableNumber.serveur.Origin);
+                   Thread.Sleep(2000);
+                   _logWriter.write("debarasser les plats");
+                   
+                   // value.TableNumber.serveur.move(value.Position);
+                   // value.TableNumber.serveur.move(value.TableNumber.serveur.Origin);
+                   // value.TableNumber.serveur.move(value.TableNumber.serveur.Origin);
                    value.Notify(value);
                     
                 
@@ -259,7 +271,7 @@ public class Models : IObserver<MHotel> ,IObserver<Client>, IObserver<RangeLead>
            
             
             
-               this.Notify(this);
+               //this.Notify(this);
             
            }
 
@@ -272,10 +284,10 @@ public class Models : IObserver<MHotel> ,IObserver<Client>, IObserver<RangeLead>
                    value.move(value.origin);
                    //value.init();
                }));  
-           } 
            }
-         
-        
+
+
+     //   _semaphore.Release();
         
         Console.WriteLine("modify");
 

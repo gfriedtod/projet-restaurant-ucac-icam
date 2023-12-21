@@ -8,6 +8,7 @@ public class Client : Persone ,Move,IObservable<Client>
     private int number_client;
     private List<IObserver<Client>> observers = new List<IObserver<Client>>(); // <Client>
     private ClientMove _clientMove = ClientMove.Waiting;
+   
     public ClientMove ClientMove
     {
         get { return _clientMove; }
@@ -77,13 +78,13 @@ public class Client : Persone ,Move,IObservable<Client>
             while (this.Position. X > target. X)
             {
                 this.Position = new Point(this.Position.X-1 , this.Position.Y);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
 
             while (this.Position. Y > target. Y)
             {
                 this.Position = new Point(this.Position.X , this.Position.Y-1);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
         }
 
@@ -92,13 +93,13 @@ public class Client : Persone ,Move,IObservable<Client>
             while (this.Position. X < target. X)
             {
                 this.Position = new Point(this.Position.X+1 , this.Position.Y);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
 
             while (this.Position. Y > target. Y)
             {
                 this.Position = new Point(this.Position.X , this.Position.Y-1);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
         }
 
@@ -107,13 +108,13 @@ public class Client : Persone ,Move,IObservable<Client>
             while (this.Position. X > target. X)
             {
                 this.Position = new Point(this.Position.X-1 , this.Position.Y);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
 
             while (this.Position. Y < target. Y)
             {
                 this.Position = new Point(this.Position.X , this.Position.Y-1);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
         }
 
@@ -122,13 +123,13 @@ public class Client : Persone ,Move,IObservable<Client>
             while (this.Position. X <target. X)
             {
                 this.Position = new Point(this.Position.X+1 , this.Position.Y);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
 
             while (this.Position. Y < target. Y)
             {
                 this.Position = new Point(this.Position.X , this.Position.Y+1);
-                Thread.Sleep(50);
+                Thread.Sleep(200);
             }
         }
         
@@ -137,6 +138,7 @@ public class Client : Persone ,Move,IObservable<Client>
     }
 
     public void commandPass()
+    
     {
         for (int i = 0; i <= number_client; i++)
         {

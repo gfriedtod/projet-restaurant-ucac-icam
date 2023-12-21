@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/client1.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/client2.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/client3.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/cuisto.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/Screenshot from 2023-12-20 01-24-48.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/serveur.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/tile002.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/tile003.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/tile005-removebg-preview.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/tile015.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/tile019.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/tile020.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/tile058.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/kitchen/Content/tile104.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File>client.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File>table.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File>instru.png</File>
+    <File>table2.png</File>
+    <File>tile.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File>mh.png</File>
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

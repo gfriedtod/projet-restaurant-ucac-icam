@@ -10,6 +10,8 @@
     <File>/home/gfried-code/RiderProjects/projetsys/view/Content/cuisto.png</File>
     <File>/home/gfried-code/RiderProjects/projetsys/view/Content/Screenshot from 2023-12-20 01-24-48.png</File>
     <File>/home/gfried-code/RiderProjects/projetsys/view/Content/serveur.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/view/Content/tile002.png</File>
+    <File>/home/gfried-code/RiderProjects/projetsys/view/Content/tile005-removebg-preview.png</File>
     <File>/home/gfried-code/RiderProjects/projetsys/view/Content/tile015.png</File>
     <File>/home/gfried-code/RiderProjects/projetsys/view/Content/tile019.png</File>
     <File>/home/gfried-code/RiderProjects/projetsys/view/Content/tile020.png</File>
@@ -23,6 +25,8 @@
     <File xsi:nil="true" />
     <File>table.png</File>
     <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File>table2.png</File>
     <File>tile.png</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
